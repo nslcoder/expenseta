@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Bought a book",
+    "amount": "550",
+    "date": "2022-03-22",
+    "category": "Education"
+  },
+  {
+    "id": 2,
+    "title": "Purchased a pair of pants",
+    "amount": "1800",
+    "date": "2022-03-23",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "title": "Went to watch The Batman",
+    "amount": "410",
+    "date": "2022-03-22",
+    "category": "Entertainment"
+  }
+]

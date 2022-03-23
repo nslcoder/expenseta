@@ -1,23 +1,18 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import expensesData from './data/expenses.json';
+import Expense from './components/Expense';
 
 function App() {
+  const [expenses, setExpenses] = useState(expensesData);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      {expenses.map((expense, index) => (
+        <div className='expense-item' key={index}>
+          <Expense expense={expense} />
+        </div>
+      ))}
     </div>
   );
 }
