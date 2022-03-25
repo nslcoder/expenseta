@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function AddExpense() {
+function AddExpense({ createExpenses }) {
   const [title, setTitle] = useState('');
   const [amount, setAmount] = useState('');
   const [spentDate, setSpentDate] = useState('');
@@ -9,10 +9,17 @@ function AddExpense() {
   function handleSubmit(e) {
     e.preventDefault();
 
-    console.log(`title: ${title}`);
-    console.log(`amount: ${amount}`);
-    console.log(`spentDate: ${spentDate}`);
-    console.log(`category: ${category}`);
+    createExpenses({
+      title,
+      amount,
+      spentDate,
+      category,
+    });
+
+    setTitle('');
+    setAmount('');
+    setSpentDate('');
+    setCategory('');
   }
 
   return (

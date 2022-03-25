@@ -7,15 +7,20 @@ import AddExpense from './components/AddExpense';
 function App() {
   const [expenses, setExpenses] = useState(expensesData);
 
+  function createExpenses(newExpense) {
+    const allExpenses = [...expenses, newExpense];
+    setExpenses(allExpenses);
+  }
+
   return (
     <div className='App'>
       <h1>Expenseta</h1>
       <h2>Expense tracker app</h2>
 
-      <AddExpense />
+      <AddExpense createExpenses={createExpenses} />
 
-      {expenses.map((expense) => (
-        <div className='expense-item' key={expense.id}>
+      {expenses.map((expense, index) => (
+        <div className='expense-item' key={index}>
           <Expense expense={expense} />
         </div>
       ))}
