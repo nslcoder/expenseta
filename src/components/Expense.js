@@ -2,9 +2,11 @@ function Expense({ expense }) {
   return (
     <>
       <p className='expense-title'>{expense.title}</p>
-      <p className='expense-amount'>{expense.amount}</p>
-      <p className='expense-date'>{expense.date}</p>
-      <p className='expense-category'>{expense.category}</p>
+      <p className='expense-amount'>NPR {expense.amount}</p>
+      <div>
+        <p className='expense-date'>{expense.date}</p>
+        <p className='expense-category'>{expense.category}</p>
+      </div>
     </>
   );
 }

@@ -3,7 +3,7 @@ function TotalExpenses({ expenses }) {
 
   return (
     <div className='total-expenses'>
-      {amounts.reduce((accu, cur) => Number(accu) + Number(cur))}
+      Total: NPR {amounts.reduce((accu, cur) => Number(accu) + Number(cur))}
     </div>
   );
 }
