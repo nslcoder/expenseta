@@ -31,6 +31,7 @@ function AddExpense({ createExpenses }) {
           <textarea
             type='text'
             id='title'
+            name='title'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
@@ -41,6 +42,7 @@ function AddExpense({ createExpenses }) {
           <input
             type='number'
             id='amount'
+            name='amount'
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             required
@@ -51,6 +53,7 @@ function AddExpense({ createExpenses }) {
           <input
             type='date'
             id='spentDate'
+            name='spentDate'
             value={spentDate}
             onChange={(e) => setSpentDate(e.target.value)}
             required
@@ -61,6 +64,7 @@ function AddExpense({ createExpenses }) {
           <input
             type='text'
             id='category'
+            name='category'
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required

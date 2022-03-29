@@ -2,19 +2,19 @@
   {
     "title": "Bought a book",
     "amount": "550",
-    "date": "2022-03-22",
+    "spentDate": "2022-03-22",
     "category": "Education"
   },
   {
     "title": "Purchased a pair of pants",
     "amount": "1800",
-    "date": "2022-03-23",
+    "spentDate": "2022-03-23",
     "category": "Clothing"
   },
   {
     "title": "Went to watch The Batman",
     "amount": "410",
-    "date": "2022-03-22",
+    "spentDate": "2022-03-22",
     "category": "Entertainment"
   }
 ]
