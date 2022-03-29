@@ -16,7 +16,7 @@ footer {
 .App {
   margin: 1em;
   padding: 0.5em;
-  width: 50vw;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,6 +34,7 @@ footer {
 
 .expenses-list {
   width: inherit;
+  margin-bottom: 3em;
 }
 
 .expense-item {
@@ -41,6 +42,7 @@ footer {
   padding: 0.5em;
   border: 1px solid #4e6ff9;
   border-radius: 0.5em;
+  background-color: #fff;
 }
 
 .expense-item > * {
@@ -61,4 +63,75 @@ footer {
 .expense-category {
   color: #535d66;
   display: inline-block;
+}
+
+.expenses-form {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.5em;
+  padding-top: 1em;
+  box-shadow: 0 0 6px 3px #edf2f7;
+}
+
+.expenses-form > h3 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+form {
+  width: 70%;
+  border-radius: 0.5em;
+  background-color: #fff;
+  padding: 0.5em;
+}
+
+form > * {
+  margin: 1em 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+textarea,
+input {
+  display: block;
+  width: 100%;
+  background-color: #edf2f7;
+  border: 1px solid #535d66;
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+input {
+  height: 3em;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 2px solid #4e6ff9;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.button > button {
+  padding: 0.7em 2em;
+  background-color: #4e6ff9;
+  border: none;
+  border-radius: 0.3em;
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 3em;
 }

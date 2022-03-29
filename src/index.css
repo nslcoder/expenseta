@@ -9,6 +9,7 @@
 body {
   height: 100%;
   font-family: 'Cardo', serif;
+  background-color: #fafafa;
 }
 
 #root {
