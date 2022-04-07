@@ -1,34 +1,16 @@
-import { useState } from 'react';
 import './App.css';
-import expensesData from './data/expenses.json';
-import Expense from './components/Expense';
-import AddExpense from './components/AddExpense';
-import TotalExpenses from './components/TotalExpenses';
+import { Link } from 'react-router-dom';
+import Home from './components/Home';
 
 function App() {
-  const [expenses, setExpenses] = useState(expensesData);
-
-  function createExpenses(newExpense) {
-    const allExpenses = [...expenses, newExpense];
-    setExpenses(allExpenses);
-  }
-
   return (
     <div className='App'>
-      <h1>Expenseta</h1>
+      <Link to='/'>
+        <h1>Expenseta</h1>
+      </Link>
       <h2>Expense tracker app</h2>
 
-      <TotalExpenses expenses={expenses} />
-
-      <div className='expenses-list'>
-        {expenses.map((expense, index) => (
-          <div className='expense-item' key={index}>
-            <Expense expense={expense} />
-          </div>
-        ))}
-      </div>
-
-      <AddExpense createExpenses={createExpenses} />
+      <Home />
 
       <footer>
         <p>
