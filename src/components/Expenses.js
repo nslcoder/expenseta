@@ -4,7 +4,7 @@ import expensesData from '../data/expenses.json';
 import Expense from './Expense';
 import TotalExpenses from './TotalExpenses';
 
-function ExpensesList() {
+function Expenses() {
   const [expenses, setExpenses] = useState(null);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function ExpensesList() {
       {!expenses ? (
         <h1>'Loading....'</h1>
       ) : (
-        <div className='App'>
+        <div className='expenses'>
           <TotalExpenses expenses={expenses} />
 
           <div className='expenses-list'>
@@ -33,7 +33,7 @@ function ExpensesList() {
             ))}
           </div>
 
-          <div className='add-btn'>
+          <div className='add-expense'>
             <Link to='/add-expense'>Add Expense</Link>
           </div>
         </div>
@@ -42,4 +42,4 @@ function ExpensesList() {
   );
 }
 
-export default ExpensesList;
+export default Expenses;

@@ -3,7 +3,7 @@ import { Outlet, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='app'>
       <Link to='/'>
         <h1>Expenseta</h1>
       </Link>

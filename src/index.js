@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import ExpensesList from './components/ExpensesList';
+import Expenses from './components/Expenses';
 import AddExpense from './components/AddExpense';
 
 ReactDOM.render(
@@ -11,7 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<App />}>
-          <Route path='/' element={<ExpensesList />} />
+          <Route path='/' element={<Expenses />} />
           <Route path='/add-expense' element={<AddExpense />} />
         </Route>
       </Routes>
