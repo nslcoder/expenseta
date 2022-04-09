@@ -1,6 +1,9 @@
 import { useState } from 'react';
 
-function AddExpense({ createExpenses }) {
+function AddExpense() {
+  const [expenses, setExpenses] = useState(
+    JSON.parse(window.localStorage.getItem('expenses'))
+  );
   const [title, setTitle] = useState('');
   const [amount, setAmount] = useState('');
   const [spentDate, setSpentDate] = useState('');
@@ -9,12 +12,17 @@ function AddExpense({ createExpenses }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    createExpenses({
+    const expense = {
       title,
       amount,
       spentDate,
       category,
-    });
+    };
+
+    expenses.push(expense);
+    setExpenses(
+      window.localStorage.setItem('expenses', JSON.stringify(expenses))
+    );
 
     setTitle('');
     setAmount('');

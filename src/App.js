@@ -1,6 +1,5 @@
 import './App.css';
-import { Link } from 'react-router-dom';
-import Home from './components/Home';
+import { Outlet, Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       </Link>
       <h2>Expense tracker app</h2>
 
-      <Home />
+      <Outlet />
 
       <footer>
         <p>
